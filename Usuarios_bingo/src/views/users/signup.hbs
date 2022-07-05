@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-md-6 mx-auto">
+        <div class="card">
+            <div class="card-header">
+                Accont Register
+            </div>
+            <div class="card-body">
+                <form action="/users/signup" method="POST">
+                    <div class="from-group">
+                        <input type="text" class="form-control" name="name" placeholder="Coloca tu nombre"
+                            value="{{name}}">
+                        <!--value es para tipiar el valor dentro de usr.controller signup-->
+                    </div>
+                    <br>
+                    <div class="from-group">
+                        <input type="email" class="form-control" name="email" placeholder="Coloca tu email"
+                            value="{{email}}">
+                    </div>
+                    <br>
+                    <div class="from-group">
+                        <input type="password" class="form-control" name="password" placeholder="Coloca tu password">
+                    </div>
+                    <br>
+                    <div class="from-group">
+                        <input type="password" class="form-control" name="confirm_password"
+                            placeholder="confirma tu password">
+                    </div>
+                    <br>
+                    <button class="btn btn-primary d-grid gap-2 col-6 mx-auto">
+                        Singup
+                    </button>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>

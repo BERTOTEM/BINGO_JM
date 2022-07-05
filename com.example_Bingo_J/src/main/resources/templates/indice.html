@@ -1,0 +1,108 @@
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Pagina Inicio</title>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,700&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+              integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+        <!--MIS ESTILOS-->
+        <link rel="stylesheet" th:href="@{/home.css}" />
+    </head>
+    <body >
+        <header th:replace="layout/plantilla :: header"></header>
+        <main>
+            <h1 style="text-align:center">BIENVENIDO AL JUEGO</h1>
+            <div class="card card-body p-2 mt-1">
+                <div class="row align-items-center">
+                    <div class="col">    
+                        <table class="table " >
+                            <tr class="table-dark" >
+                                <th >B</th>
+                                <th >I</th>
+                                <th >N</th>
+                                <th >G</th>
+                                <th >O</th> 
+                            </tr>
+                            <tr class="table-primary">
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_B}" th:text="${lb[0]}" >mostrar columna B</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_I}" th:text="${li[0]}" >mostrar columna I</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_N}" th:text="${ln[0]}" >mostrar columna N</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_G}" th:text="${lg[0]}" >mostrar columna G</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_O}" th:text="${lo[0]}">mostrar columna O</td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_B}" th:text="${lb[1]}" >mostrar columna B</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_I}" th:text="${li[1]}" >mostrar columna I</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_N}" th:text="${ln[1]}" >mostrar columna N</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_G}" th:text="${lg[1]}" >mostrar columna G</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_O}" th:text="${lo[1]}">mostrar columna O</td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_B}" th:text="${lb[2]}" >mostrar columna B</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_I}" th:text="${li[2]}" >mostrar columna I</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_N}" th:text="${ln[2]}" >mostrar columna N</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_G}" th:text="${lg[2]}" >mostrar columna G</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_O}" th:text="${lo[2]}">mostrar columna O</td>
+                            </tr > 
+                            <tr class="table-primary">
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_B}" th:text="${lb[3]}" >mostrar columna B</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_I}" th:text="${li[3]}" >mostrar columna I</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_N}" th:text="${ln[3]}" >mostrar columna N</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_G}" th:text="${lg[3]}" >mostrar columna G</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_O}" th:text="${lo[3]}">mostrar columna O</td>
+                            </tr>
+                            <tr class="table-primary">
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_B}" th:text="${lb[4]}" >mostrar columna B</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_I}" th:text="${li[4]}" >mostrar columna I</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_N}" th:text="${ln[4]}" >mostrar columna N</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_G}" th:text="${lg[4]}" >mostrar columna G</td>
+                                <td> <a type="button" class="btn btn-primary"th:href="@{/CheckCard_O}" th:text="${lo[4]}">mostrar columna O</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="container p-2 mt-1">
+                <div class="row align-items-end">
+                    <a  class="btn btn-Light col order-last " th:text="${BallDrawn}"></a>
+                    <a type="button" class="btn btn-Light col order-last " th:href="@{/Bolita}" th:action="${BallDrawn}">SIGUIENTE BALOTA</a>
+                </div>
+
+
+            </div>    
+        </main>
+        <div class="card p-1 mt-2" style="text-align: center" >
+            <div cclass="card-header"style="font-size: 1.5em" th:text="${bingo.ballinPlay}">
+
+            </div>
+        </div>
+        <div class="container p-2 mt-1">
+            <div class="row align-items-end">
+                <a type="button" class="btn btn-Light col order-last " th:href="@{/Winner}"th:text="${BINGO}">BINGO</a>
+                <a type="button" class="btn btn-Light col order-last " th:href="@{/WinnerL}"th:text="${BINGO_L}">BINGO</a>
+                <a type="button" class="btn btn-Light col order-last " th:href="@{/WinnerX}"th:text="${BINGO_X}">BINGO</a>
+                <a type="button" class="btn btn-Light col order-last " th:href="@{/Winner88}"th:text="${BINGO_88}">BINGO</a>
+            </div>    
+
+        </div>    
+        <div class="card p-1 mt-2" style="text-align: center" >
+            <div cclass="card-header"style="font-size: 2em" th:text="${bingo.Winner}" >
+                PARA GANAR EL PREMIO MAYOR DEBES DE LLENAR TU CARTILLA CON X
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+                integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+                integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    </body>
+</html>
